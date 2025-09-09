@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>대화형 AI — 1단계 데모</title>
+  <!-- 외부 CSS -->
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="app__header">
+      <div class="app__title">대화형 AI — 1단계</div>
+      <div class="app__subtitle">Flask + HTML/JS 최소 기능 데모</div>
+    </header>
+
+    <!-- 채팅 영역 -->
+    <main id="chatbox" class="chat">
+      <!-- 메시지들은 JS가 동적으로 여기에 추가합니다 -->
+      <div class="msg msg--bot">
+        <div class="msg__avatar">🤖</div>
+        <div class="msg__bubble">
+          안녕하세요! 무엇을 도와드릴까요?
+        </div>
+      </div>
+    </main>
+
+    <!-- 입력 영역 -->
+    <footer class="composer">
+      <input
+        id="userInput"
+        class="composer__input"
+        type="text"
+        placeholder="메시지를 입력하고 Enter를 눌러보세요!"
+        autocomplete="off"
+      />
+      <button id="sendBtn" class="composer__btn">전송</button>
+    </footer>
+  </div>
+
+  <!-- 상태/알림 -->
+  <div id="toast" class="toast" hidden></div>
+
+  <!-- 외부 JS -->
+  <script src="/static/script.js"></script>
+</body>
+</html>
